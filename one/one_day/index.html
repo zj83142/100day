@@ -13,7 +13,7 @@
       
     </div>
     <div class="swiper-wrapper">
-      <div class="slider slider1">
+      <div class="slider slider1 active">
         <div class="logo">
           <img src="imgs/wzp_logo.png" />
         </div>
@@ -40,7 +40,7 @@
           <h3><i class="dot"></i>我们的福利</h3>
         </div>
       </div>
-      <div class="slider slider4 active">
+      <div class="slider slider4 ">
         <div class="swiper-slide slide1 swiper-slide-prev" style="margin-right: 15px;">
     <div class="posit_details_head">
             <h3 class="posit_details_tit">公关专员</h3>
@@ -60,10 +60,6 @@
           </div> 
           <div class="posit_arrow_bot"></div>     
           
-          
-          
-          
-    
     </div>
       </div>
       <div class="slider slider5 ">
@@ -93,14 +89,25 @@
       <img src="imgs/arrow.png" id="array">
     </div>
     <div class="swiper-pagination">
-      <span class="item active"></span>
-      <span class="item"></span>
-      <span class="item"></span>
-      <span class="item"></span>
-      <span class="item"></span>
-      <span class="item"></span>
+      <span class="item active" data-show="slider1"></span>
+      <span class="item" data-show="slider2"></span>
+      <span class="item" data-show="slider3"></span>
+      <span class="item" data-show="slider4"></span>
+      <span class="item" data-show="slider5"></span>
+      <span class="item" data-show="slider6"></span>
     </div>
   </div>
   <script type="text/javascript" src="js/jquery.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.swiper-pagination .item').click(function() {
+        $('.swiper-pagination .item').removeClass('active');
+        $(this).addClass('active');
+        $('.swiper-wrapper .slider').removeClass('active');
+        $('.swiper-wrapper .' + $(this).data('show')).addClass('active');
+      });
+    });
+
+  </script>
 </body>
 </html>
