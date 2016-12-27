@@ -12,7 +12,38 @@
   <!-- 可选的Bootstrap主题文件（一般不用引入） -->
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+
   <link rel="stylesheet" href="css/style.css" >
+
+  <style type="text/css">
+    .day{
+      background: #54927b;
+      color: #fff;
+      padding: 30px 0;
+      text-align: center;
+      margin: 10px 5px;
+      position: relative;
+      font-size: 20px;
+    }
+    .corner {
+      position: absolute;
+      top: -1px;
+      left: -2px;
+      z-index: 10;
+      width: 1px;
+      height: 0;
+      border-right:50px solid transparent;
+      border-top: 50px solid #ffa447;
+    }
+    .corner .fa {
+      position: absolute;
+      top: -42px;
+      left: 6px;
+      color: #fff!important;
+      font-size: 18px!important;
+    }
+  </style>
 
 </head>
 <body>
@@ -27,10 +58,22 @@
   </nav>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-1 col-sm-3 col-xs-6 day" data-to="one/one_day/index.html">第一天</div>
-      <div class="col-md-1 col-sm-3 col-xs-6 day" data-to="loadding/index.html">加载效果</div>
-      <div class="col-md-1 col-sm-3 col-xs-6 day" data-to="buttons/index.html">按钮效果</div>
-      <div class="col-md-1 col-sm-3 col-xs-6 day">第四天</div>
+      <div class="col-md-2 col-sm-3 col-xs-6 day" data-to="one/one_day/index.html">
+        <div class="corner"><i class="fa fa-check"></i></div>
+        第一天
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-6 day" data-to="loadding/index.html">
+        <div class="corner"><i class="fa fa-check"></i></div>
+        加载效果
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-6 day" data-to="buttons/index.html">
+        <div class="corner"><i class="fa fa-check"></i></div>
+        按钮效果
+      </div>
+      <div class="col-md-2 col-sm-3 col-xs-6 day">
+        <div class="corner"><i class="fa fa-check"></i></div>
+        第四天
+      </div>
     </div>
   </div>
   
