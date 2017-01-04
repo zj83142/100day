@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta ttp-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 形状按钮 </title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+
+    <style type="text/css">
+      a, a:hover{
+        text-decoration: none;
+      }
+      .tip{
+        font-size: 14px;
+        color: #3498db;
+        font-weight: bold;
+        margin-left: 8px;
+      }
+      /* ----- btn1 start--- */
+      .btn1 .item{
+        background: #39b2a9;
+        display: inline-block;
+        width: 120px;
+        text-align: center;
+        height: 40px;
+        margin-left: 20px;
+        line-height: 40px;
+        font-size: 1.1em;
+        color: #fff;
+        position: relative;
+      }
+      .btn1 .item:hover{
+        background-color: #3498db;  
+      }
+      .btn1 .item:before{
+        position: absolute;
+        left: -20px;
+        content: '';
+        border: 0px solid transparent;
+        border-right-color: #39b2a9;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
+      }
+      .btn1 .item:hover:before{
+        position: absolute;
+        left: -20px;
+        content: '';
+        border: 0px solid transparent; 
+        border-right-color: #3498db;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
+      }
+     
+      .btn1 .item:after{
+        position: absolute;
+        left: 120px;
+        content: '';
+        border: 0px solid #39b2a9;
+        border-right-color: transparent;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
+      }
+      .btn1 .item:hover:after{
+        position: absolute;
+        left: 120px;
+        content: '';
+        border: 0px solid #3498db; 
+        border-right-color: transparent;
+        border-width: 20px 10px;
+        width: 0;
+        height: 0;
+      }
+      /* ----- btn1 end--- */
+      /* ----- btn2 start--- */
+      @keyframes warn {
+        0% {
+          transform: scale(1);
+          opacity: 0.8;
+        }
+        20% {
+          transform: scale(1);
+          opacity: 0.6;
+        }
+        40% {
+          transform: scale(1.2);
+          opacity: 0.4;
+        }
+        60% {
+          transform: scale(1.4);
+          opacity: 0.2;
+        }
+        80% {
+          transform: scale(1.6);
+          opacity: 0.1;
+        }
+        100% {
+          transform: scale(1.8);
+          opacity: 0.0;
+        }
+      }
+      .btn2{
+        margin-left: 100px;
+      }
+      .btn2 .item{
+        position: relative;
+        float: left;
+        width: 50px;
+        height: 50px;
+        margin-right: 100px;
+      }
+      .btn2 .item span{
+        width: 100px;
+        height: 100px;
+        display: block;
+        border-radius: 50%;
+        background: #39b2a9;
+        transition:1s all ease;
+        text-align: center;
+        line-height: 100px;
+        color: #fff;
+      }
+      .btn2 .item:hover span{
+        transform:rotateZ(360deg);
+      }
+      .btn2 .item a:before{
+        border: 12px solid #A8E957;
+        content:'';
+        position: absolute;
+        width: 100px; 
+        height: 100px;
+        border-radius: 62px;
+        opacity: 0;
+      }
+      .btn2 .item:hover a:before{animation: warn 1s ease-out infinite;}
+      /* ----- btn2 end--- */
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h4>按钮效果一</h4>
+      <div class="row">
+        <div class="btn1">
+          <div class="item">按钮效果一</div>
+          <div class="item">按钮效果一</div>
+          <div class="item">按钮效果一</div>
+          <div class="item">按钮效果一</div>
+        </div>
+      </div>
+      <h4>按钮效果二<span class="tip">(注意a标签不能删除，否则出现多个按钮同时闪烁现象)</span></h4>
+      <div class="row">
+        <div class="btn2">
+          <div class="item">
+            <a href="#">
+              <span>按钮效果二</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <span>按钮效果二</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <span>按钮效果二</span>
+            </a>
+          </div>
+          <div class="item">
+            <a href="#">
+              <span>按钮效果二</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
